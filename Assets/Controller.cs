@@ -13,7 +13,7 @@ public class Controller : MonoBehaviour
 
     public float social_credits;
     private float max_social_credits;
-    public GameObject Social_credits_text;
+    public GameObject social_credits_text;
     private Text _social_credits_text;
 
     public int labor_workers;
@@ -37,7 +37,7 @@ public class Controller : MonoBehaviour
 
      private void Start()
      {
-         _social_credits_text = Social_credits_text.GetComponent<Text>();
+         _social_credits_text = social_credits_text.GetComponent<Text>();
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
 
