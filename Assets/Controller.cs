@@ -13,8 +13,16 @@ public class Controller : MonoBehaviour
 
     public float social_credits;
     private float max_social_credits;
+    public GameObject Social_credits_text;
+    private Text _social_credits_text;
 
+    public int labor_workers;
+    public float labor_workers_cost = 10f;
+
+    public float base_clicks = 1;
     public float current_multiplier = 1f;
+    
+    public float last_time_clicked;
     public float max_time_not_clicked = 5f; //For testing change to 20f later
 
     private int current_stage_of_achievements;
@@ -22,15 +30,14 @@ public class Controller : MonoBehaviour
 
     private int number_of_strikes;
     public int max_number_of_strikes = 3;
-
-    private float last_time_clicked;
+    
 
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
-//     
-//
+
      private void Start()
      {
+         _social_credits_text = Social_credits_text.GetComponent<Text>();
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
 
@@ -39,6 +46,8 @@ public class Controller : MonoBehaviour
 //
      private void Update()
      {
+         // Add the labor workers social credits
+         social_credits += labor_workers * 0.1f * current_multiplier * Time.deltaTime;
          // Check if current SC is the largest score there is
          if (social_credits > max_social_credits)
          {
@@ -103,6 +112,8 @@ public class Controller : MonoBehaviour
          }
          
          
+         // Update the social credits text at the end
+         _social_credits_text.text = $"Social Credits: {(int)social_credits} SC"; 
 //         
      }
 }
