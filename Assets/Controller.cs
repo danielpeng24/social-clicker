@@ -11,10 +11,15 @@ public class Controller : MonoBehaviour
     
     //Change some of the vars to private later after testing
 
+    public Chatbox chat;
+    
+
     public float social_credits;
     private float max_social_credits;
     public GameObject social_credits_text;
     private Text _social_credits_text;
+
+    public bool lose_credits = false;
 
     public int labor_workers;
     public float labor_workers_cost = 10f;
@@ -31,13 +36,25 @@ public class Controller : MonoBehaviour
     private int number_of_strikes;
     public int max_number_of_strikes = 3;
     
-
+    private bool is_strike;
+    public GameObject strike_image;
+    private SpriteRenderer strike_sprite_renderer;
+    private AudioSource strike_audio;
+    private float strike_time_start;
+    
+    
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
 
      private void Start()
      {
          _social_credits_text = social_credits_text.GetComponent<Text>();
+         
+         strike_sprite_renderer = strike_image.GetComponent<SpriteRenderer>();
+         strike_audio = strike_image.GetComponentInChildren<AudioSource>();
+         strike_audio.enabled = false;
+         
+         
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
 
@@ -57,7 +74,7 @@ public class Controller : MonoBehaviour
          switch (current_stage_of_achievements)
          {
              case 0:
-                 if (social_credits > 500)
+                 if (max_social_credits > 500)
                  {
                      // Say in chat "Gained Better Schooling" 
                      current_stage_of_achievements++;
@@ -65,7 +82,7 @@ public class Controller : MonoBehaviour
                  }
                  break;
              case 1:
-                 if (social_credits > 1000)
+                 if (max_social_credits > 1000)
                  {
                      //Say in chat "Admitted to a Great University" 
                      current_stage_of_achievements++;
@@ -74,7 +91,7 @@ public class Controller : MonoBehaviour
 
                  break;
              case 2:
-                 if (social_credits > 2000)
+                 if (max_social_credits > 2000)
                  {
                      current_stage_of_achievements++;
                      current_multiplier += 0.1f;
@@ -82,7 +99,7 @@ public class Controller : MonoBehaviour
 
                  break;
              case 3:
-                 if (social_credits > 100000)
+                 if (max_social_credits > 100000)
                  {
                      current_stage_of_achievements++;
                      current_multiplier += 1f;
@@ -100,15 +117,36 @@ public class Controller : MonoBehaviour
          // check for punishments
          if (Time.time - last_time_clicked > max_time_not_clicked)
          {
-             last_time_clicked = Time.time;
+             is_strike = true;
              number_of_strikes++;
-             execution_sprite_renderer.enabled = true;
-             Debug.Log("You failed to click the button, the CPP be coming for you");
+             
+             strike_sprite_renderer.enabled = true;
+             strike_audio.enabled = true;
+             lose_credits = true;
+             
+             strike_time_start = Time.time;
+             last_time_clicked = Time.time;
+             chat.SendMessageToChat("You failed to click the button, the CPP be coming for you");
          }
 
-         if (number_of_strikes > max_number_of_strikes)
+         if (lose_credits)
          {
-             Debug.Log("You failed the game, the execution team is headed you way");
+             social_credits *= ((float)0.95 * Time.deltaTime);
+         }
+
+         if (is_strike && Time.time - strike_time_start >= 1.5)
+         {
+             is_strike = false;
+             strike_sprite_renderer.enabled = false;
+             strike_audio.enabled = false;
+             last_time_clicked = Time.time;
+         }
+
+         if (number_of_strikes >= max_number_of_strikes)
+         {
+             execution_sprite_renderer.enabled = true;
+             chat.SendMessageToChat("You failed the game, the execution team is headed you way");
+             // Application.Quit();
          }
          
          

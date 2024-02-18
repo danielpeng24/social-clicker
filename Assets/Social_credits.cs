@@ -23,6 +23,7 @@ public class Inc_social_credits: MonoBehaviour
     {
         _controller.social_credits += _controller.base_clicks * _controller.current_multiplier;
         _controller.last_time_clicked = Time.time;
+        _controller.lose_credits = false;
     }
     
 
