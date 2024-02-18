@@ -19,7 +19,7 @@ public class Controller : MonoBehaviour
     public GameObject social_credits_text;
     private Text _social_credits_text;
 
-    public bool lose_credits = false;
+    public bool lose_credits;
 
     public int labor_workers;
     public float labor_workers_cost = 10f;
