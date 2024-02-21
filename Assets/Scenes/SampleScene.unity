@@ -637,7 +637,7 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 697825297}
-  - component: {fileID: 697825296}
+  - component: {fileID: 697825298}
   m_Layer: 0
   m_Name: Chatbox
   m_TagString: Untagged
@@ -645,24 +645,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &697825296
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 697825295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cb5d48b1a3b5094ca88d51a16391093, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  maxmessages: 10
-  selected_chatbox: 0
-  chatPanel: {fileID: 1363679704}
-  textObject: {fileID: 7420423743455142056, guid: 78d87a0b3022a4e429b7807dcb087b4b, type: 3}
-  chatboxInput: {fileID: 1497676262}
-  messagelist: []
 --- !u!4 &697825297
 Transform:
   m_ObjectHideFlags: 0
@@ -678,6 +660,24 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &697825298
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 697825295}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a05d8c37ebbcdf147bb4584d2c213589, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  maxmessages: 10
+  selected_chatbox: 0
+  chatPanel: {fileID: 1363679704}
+  textObject: {fileID: 7420423743455142056, guid: 78d87a0b3022a4e429b7807dcb087b4b, type: 3}
+  chatboxInput: {fileID: 1497676262}
+  messagelist: []
 --- !u!1 &713617079
 GameObject:
   m_ObjectHideFlags: 0
@@ -819,7 +819,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1447836739}
   m_HandleRect: {fileID: 1447836737}
   m_Direction: 0
-  m_Value: 1
+  m_Value: 0
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
@@ -2068,7 +2068,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11ddc6ce804ee743bf261baa59de555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chat: {fileID: 697825296}
+  chat: {fileID: 0}
   social_credits: 0
   social_credits_text: {fileID: 1745618305}
   lose_credits: 0
@@ -2929,7 +2929,7 @@ MonoBehaviour:
   m_TargetGraphic: {fileID: 1170671609}
   m_HandleRect: {fileID: 1170671607}
   m_Direction: 2
-  m_Value: 0
+  m_Value: 1
   m_Size: 1
   m_NumberOfSteps: 0
   m_OnValueChanged:
