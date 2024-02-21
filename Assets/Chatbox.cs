@@ -2,6 +2,7 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using UnityEngine.UIElements;
 
 
 public class Chatbox : MonoBehaviour
@@ -10,13 +11,15 @@ public class Chatbox : MonoBehaviour
     public bool selected_chatbox = false;
     public GameObject chatPanel, textObject;
     public InputField chatboxInput;
+
+    List<string> key_words_list = new List<string>();
     
     
     [SerializeField]
     List<Message> messagelist = new List<Message>();
     void Start()
     {
-        
+        // key_words_list.Add("mao")
     }
 
     // Update is called once per frame
@@ -54,6 +57,10 @@ public class Chatbox : MonoBehaviour
             Destroy(messagelist[0].textObject.gameObject);
             messagelist.RemoveAt(0);
         }
+        // if (){
+            // Debug.Log("True")
+        // }
+
         
 
         Message newMessage = new Message();
