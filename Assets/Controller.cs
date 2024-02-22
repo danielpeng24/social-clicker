@@ -3,6 +3,8 @@ using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
+using Random = System.Random;
+
 
 public class Controller : MonoBehaviour
 {
@@ -11,13 +13,15 @@ public class Controller : MonoBehaviour
     
     //Change some of the vars to private later after testing
 
+    private Random rng = new Random();
+
     public Chatbox chat;
+    private float time_till_random_comment;
+    
     
 
     public float social_credits;
     private float max_social_credits;
-    public GameObject social_credits_text;
-    private Text _social_credits_text;
 
     public bool lose_credits;
 
@@ -48,7 +52,6 @@ public class Controller : MonoBehaviour
 
      private void Start()
      {
-         _social_credits_text = social_credits_text.GetComponent<Text>();
          
          strike_sprite_renderer = strike_image.GetComponent<SpriteRenderer>();
          strike_audio = strike_image.GetComponentInChildren<AudioSource>();
@@ -57,6 +60,7 @@ public class Controller : MonoBehaviour
          
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
+         time_till_random_comment = rng.Next(3, 10);
 
      }
 
@@ -70,6 +74,92 @@ public class Controller : MonoBehaviour
          {
              max_social_credits = social_credits;
          }
+         // Check for certain ranges to say random comments
+         time_till_random_comment -= Time.deltaTime;
+         if (time_till_random_comment <= 0)
+         {
+             time_till_random_comment = rng.Next(15, 30);
+             if (max_social_credits < 0)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("CCP: Be warned!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("CCP: You are on the list of the outcasts!");
+                 }
+             }
+             else if (max_social_credits == 0)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("CCP: We expect much from you!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("Game: Nobody knows you, and nobody cares!");
+                 }
+             }
+             // Don't ask me know this works, it just does, rider did this not me, I wrote 0 <= max_social_credits && max_social_credits <= 100
+             else if (max_social_credits is >= 0 and <= 100)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("Game: Some people start to see your patriotism!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("Game: You game a little fame");
+                 }
+             }
+             else if (max_social_credits is >= 101 and <= 500)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("Game: Many people start to notice your patriotism!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("CCP: WORK HARD! NOT SMART!");
+                 }
+             }
+             else if (max_social_credits is >= 501 and <= 1500)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("Game: You have gained some fame for your patriotism!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("CCP: WORK HARDER! NOT SMARTER!");
+                 }
+             }
+             else if (1501 <= max_social_credits && max_social_credits <= 2000)
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("Game: You have gained now famous throughout China!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("CCP: You have been recognized!");
+                 }
+             }
+             else
+             {
+                 if (rng.Next(-1, 2) == 0)
+                 {
+                     chat.SendMessageToChat("Game: You are now famous throughout the world!");
+                 }
+                 else
+                 {
+                     chat.SendMessageToChat("Game: People throughout the world praise you for the amount of credit");
+                 }
+             }
+             chat.SendMessageToChat("");
+         }
+
          // check for rewards
          switch (current_stage_of_achievements)
          {
@@ -126,7 +216,7 @@ public class Controller : MonoBehaviour
              
              strike_time_start = Time.time;
              last_time_clicked = Time.time;
-             chat.SendMessageToChat("You failed to click the button, the CPP be coming for you");
+             chat.SendMessageToChat("CCP: You failed to click the button, the CPP be coming for you\n");
          }
 
          if (lose_credits)
@@ -145,13 +235,10 @@ public class Controller : MonoBehaviour
          if (number_of_strikes >= max_number_of_strikes)
          {
              execution_sprite_renderer.enabled = true;
-             chat.SendMessageToChat("You failed the game, the execution team is headed you way");
+             chat.SendMessageToChat("CCP: You failed the game, the execution team is headed you way\n");
              // Application.Quit();
          }
          
-         
-         // Update the social credits text at the end
-         _social_credits_text.text = $"Social Credits: {(int)social_credits} SC"; 
-//         
+                
      }
 }

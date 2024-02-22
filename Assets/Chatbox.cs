@@ -42,7 +42,7 @@ public class Chatbox : MonoBehaviour
         {
             if (Input.GetKeyDown(KeyCode.Return))
             {
-                SendMessageToChat(chatboxInput.text);
+                SendMessageToChat(chatboxInput.text, true);
                 chatboxInput.text = "";
                 chatboxInput.ActivateInputField();
             }
@@ -50,8 +50,10 @@ public class Chatbox : MonoBehaviour
         }
     }
 
-    public void SendMessageToChat(string text)
+    public void SendMessageToChat(string text, bool is_player=false)
     {
+        
+        // Comment to Daniel Peng use is_player to check whether or not you should check for key words
         if (messagelist.Count >= maxmessages)
         {
             Destroy(messagelist[0].textObject.gameObject);

@@ -12,11 +12,18 @@ public class Inc_social_credits: MonoBehaviour
 
     public GameObject Contoller;
     private Controller _controller;
+    private Text social_credits_text;
     
 
     private void Start()
     {
+        social_credits_text = GetComponent<Text>();
         _controller = Contoller.GetComponent<Controller>();
+    }
+
+    private void Update()
+    {
+        social_credits_text.text = $"Social Credits: {(int)_controller.social_credits} SC";
     }
 
     public void Add_credits()
