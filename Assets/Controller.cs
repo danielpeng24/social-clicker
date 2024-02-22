@@ -1,5 +1,4 @@
 using System;
-using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UI;
@@ -136,7 +135,7 @@ public class Controller : MonoBehaviour
                      chat.SendMessageToChat("CCP: WORK HARDER! NOT SMARTER!");
                  }
              }
-             else if (1501 <= max_social_credits && max_social_credits <= 2000)
+             else if (max_social_credits is >= 1501 and <= 2000)
              {
                  if (rng.Next(-1, 2) == 0)
                  {
@@ -170,6 +169,7 @@ public class Controller : MonoBehaviour
                      // Say in chat "Gained Better Schooling" 
                      current_stage_of_achievements++;
                      current_multiplier += 0.025f;
+                     chat.SendMessageToChat("Game: congratulations on getting better schooling +2.5% permanent sc boost");
                  }
                  break;
              case 1:
@@ -178,6 +178,7 @@ public class Controller : MonoBehaviour
                      //Say in chat "Admitted to a Great University" 
                      current_stage_of_achievements++;
                      current_multiplier += 0.05f;
+                     chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent sc boost");
                  }
 
                  break;
@@ -186,6 +187,7 @@ public class Controller : MonoBehaviour
                  {
                      current_stage_of_achievements++;
                      current_multiplier += 0.1f;
+                     chat.SendMessageToChat("you got a job +10% permanent sc boost");
                  }
 
                  break;
@@ -194,6 +196,7 @@ public class Controller : MonoBehaviour
                  {
                      current_stage_of_achievements++;
                      current_multiplier += 1f;
+                     chat.SendMessageToChat("Game: you become a member of the ccp +100% permanent sc boost");
                  }
                  break;
                  
