@@ -21,11 +21,14 @@ public class Inc_social_credits: MonoBehaviour
         _controller = Contoller.GetComponent<Controller>();
     }
 
+    private void Update()
+    {
+        social_credits_text.text = $"Social Credits: {(int)_controller.social_credits} SC";
+    }
+
     public void Add_credits()
     {
         _controller.social_credits += _controller.base_clicks * _controller.current_multiplier;
-        social_credits_text.text = $"Social Credits: {(int)_controller.social_credits} SC";
-        
         _controller.last_time_clicked = Time.time;
         _controller.lose_credits = false;
     }

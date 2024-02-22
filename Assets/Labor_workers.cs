@@ -29,7 +29,7 @@ public class Labor_workers : MonoBehaviour
         {
             _controller.social_credits -= _controller.labor_workers_cost;
             _controller.labor_workers += 1;
-            _controller.labor_workers_cost = (float)Math.Pow(1.35, _controller.labor_workers);
+            _controller.labor_workers_cost = (int)Math.Pow(1.35, _controller.labor_workers);
             
             Labor_workers_text.text = $"{_controller.labor_workers}";
             Cost_text.text = $"{(int)_controller.labor_workers_cost}";
