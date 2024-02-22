@@ -16,8 +16,6 @@ public class Controller : MonoBehaviour
 
     public float social_credits;
     private float max_social_credits;
-    public GameObject social_credits_text;
-    private Text _social_credits_text;
 
     public bool lose_credits;
 
@@ -48,7 +46,6 @@ public class Controller : MonoBehaviour
 
      private void Start()
      {
-         _social_credits_text = social_credits_text.GetComponent<Text>();
          
          strike_sprite_renderer = strike_image.GetComponent<SpriteRenderer>();
          strike_audio = strike_image.GetComponentInChildren<AudioSource>();
@@ -149,9 +146,6 @@ public class Controller : MonoBehaviour
              // Application.Quit();
          }
          
-         
-         // Update the social credits text at the end
-         _social_credits_text.text = $"Social Credits: {(int)social_credits} SC"; 
-//         
+                
      }
 }
