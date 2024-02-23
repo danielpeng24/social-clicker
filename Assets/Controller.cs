@@ -222,62 +222,62 @@ public class Controller : MonoBehaviour
 
         // check if we have more than 2000 SC and increment the job promotion of +2.5%
         if ((max_social_credits - 2500) / 1000 > job_promotions)
-                            {
-                                job_promotions++;
-                                current_multiplier += 0.025f;
-                            }
+        {
+            job_promotions++;
+            current_multiplier += 0.025f;
+        }
          
-         // check for punishments
-         if (Time.time - last_time_clicked > max_time_not_clicked)
-         {
-             is_strike = true;
-             number_of_strikes++;
+        // check for punishments
+        if (Time.time - last_time_clicked > max_time_not_clicked)
+        {
+            is_strike = true;
+            number_of_strikes++;
              
-             strike_sprite_renderer.enabled = true;
-             strike_audio.enabled = true;
-             lose_credits = true;
+            strike_sprite_renderer.enabled = true;
+            strike_audio.enabled = true;
+            lose_credits = true;
              
-             strike_time_start = Time.time;
-             last_time_clicked = Time.time;
-             chat.SendMessageToChat("CCP: You failed to click the button, the CPP be coming for you\n");
-         }
+            strike_time_start = Time.time;
+            last_time_clicked = Time.time;
+            chat.SendMessageToChat("CCP: You failed to click the button, the CPP be coming for you\n");
+        }
 
-         if (lose_credits)
-         {
-             social_credits *= ((float)0.95 * Time.deltaTime);
-         }
+        if (lose_credits)
+        {
+            social_credits -= ((float)0.95 * social_credits * Time.deltaTime);
+        }
 
-         if (is_strike && Time.time - strike_time_start >= 2.5)
-         {
-             is_strike = false;
-             strike_sprite_renderer.enabled = false;
-             strike_audio.enabled = false;
-             last_time_clicked = Time.time;
-         }
+        if (is_strike && Time.time - strike_time_start >= 2.5)
+        {
+            is_strike = false;
+            strike_sprite_renderer.enabled = false;
+            strike_audio.enabled = false;
+            last_time_clicked = Time.time;
+        }
 
-         if (boost_time > 0)
-         {
-             boost_time -= Time.time;
-             if ((int)boost_time == 103)
-             {
-                 current_multiplier += 1.0f;
-             }
-             else if ((int)boost_time == 0)
-             {
-                 current_multiplier -= 1.0f;
-             }
+        if (boost_time > 0)
+        {
+            boost_time -= Time.time;
+            if ((int)boost_time == 103)
+            {
+                current_multiplier += 1.0f;
+            }
+            else if ((int)boost_time == 0)
+            {
+                current_multiplier -= 1.0f;
+            }
              
-         }
+        }
 
-         {
+        {
              
-         }
-         if (number_of_strikes >= max_number_of_strikes)
-         {
-             execution_sprite_renderer.enabled = true;
-             chat.SendMessageToChat("CCP: You failed the game, the execution team is headed you way\n");
-             // Application.Quit();
-         }
+        }
+        if (number_of_strikes >= max_number_of_strikes)
+        {
+            execution_sprite_renderer.enabled = true;
+            chat.SendMessageToChat("CCP: You failed the game, the execution team is headed you way\n");
+            // Application.Quit();
+        }
 
  
 
