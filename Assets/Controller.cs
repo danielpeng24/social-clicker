@@ -18,7 +18,6 @@ public class Controller : MonoBehaviour
     public Chatbox chat;
     private float time_till_random_comment;
    
-  
     public float social_credits;
     private float max_social_credits;
 
