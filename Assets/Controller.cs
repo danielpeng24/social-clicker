@@ -271,11 +271,7 @@ public class Controller : MonoBehaviour
             {
                 current_multiplier -= 1.0f;
             }
-             
-        }
 
-        {
-             
         }
         if (number_of_strikes >= max_number_of_strikes)
         {
