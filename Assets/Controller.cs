@@ -209,14 +209,19 @@ public class Controller : MonoBehaviour
         else if (labor_workers == 50) 
         {
             chat.SendMessageToChat("You are now a factory");
+            labor_workers += 1;
         }
         else if (labor_workers == 100)
         { 
             chat.SendMessageToChat("Your factory is now full and the workers are now angry");
+            labor_workers += 1;
+
         }
         else if (labor_workers == 200)
         {
             chat.SendMessageToChat("You have too many workers, the people now think that you are a captitalist");
+            labor_workers += 1;
+
         }
 
 
