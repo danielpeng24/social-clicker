@@ -71,12 +71,15 @@ public class Chatbox : MonoBehaviour
 
         if (is_player)
         {
-            if (text == "something")
+            if (text == "glory to the ccp")
             {
                 _controller.boost_time = 103;
                 text = "GLORY TO THE CCP 103 seconds boost";
             }
-                
+            else if (text == "taiwan good")
+            {
+                sc -= 9999
+            }
         }
         
         
