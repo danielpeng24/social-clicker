@@ -14,10 +14,10 @@ public class Chatbox : MonoBehaviour
     public InputField chatboxInput;
 
     List<string> key_words_list = new List<string>();
-    
-    
-    [SerializeField]
-    List<Message> messagelist = new List<Message>();
+
+
+    [SerializeField] List<Message> messagelist = new List<Message>();
+
     void Start()
     {
         // key_words_list.Add("mao")
@@ -26,7 +26,8 @@ public class Chatbox : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if ((EventSystem.current.currentSelectedGameObject == chatboxInput.gameObject || Input.GetKeyDown(KeyCode.Space)) && Input.GetMouseButtonDown(0))
+        if ((EventSystem.current.currentSelectedGameObject == chatboxInput.gameObject ||
+             Input.GetKeyDown(KeyCode.Space)) && Input.GetMouseButtonDown(0))
         {
             selected_chatbox = !selected_chatbox;
             if (selected_chatbox)
@@ -47,17 +48,16 @@ public class Chatbox : MonoBehaviour
                 chatboxInput.text = "";
                 chatboxInput.ActivateInputField();
             }
-            
+
         }
     }
 
-    public void SendMessageToChat(string text, bool is_player=false)
+    public void SendMessageToChat(string text, bool is_player = false)
     {
-        
+
         // Comment to Daniel Peng use is_player to check whether or not you should check for key words
         // Checker code
-        
-        }
+
         if (messagelist.Count >= maxmessages)
         {
             Destroy(messagelist[0].textObject.gameObject);
@@ -72,22 +72,23 @@ public class Chatbox : MonoBehaviour
 
             }
         }
-        
 
 
-    Message newMessage = new Message();
-            
-            newMessage.text = text;
 
-            GameObject newText = Instantiate(textObject, chatPanel.transform);
-            
-            newMessage.textObject = newText.GetComponent<Text>();
-            newMessage.textObject.text = text;
+        Message newMessage = new Message();
 
-            
-            messagelist.Add(newMessage);
-        
+        newMessage.text = text;
+
+        GameObject newText = Instantiate(textObject, chatPanel.transform);
+
+        newMessage.textObject = newText.GetComponent<Text>();
+        newMessage.textObject.text = text;
+
+
+        messagelist.Add(newMessage);
+    }
 }
+
 [System.Serializable]
 public class Message
 {
