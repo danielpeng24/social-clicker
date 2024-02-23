@@ -63,9 +63,16 @@ public class Chatbox : MonoBehaviour
             Destroy(messagelist[0].textObject.gameObject);
             messagelist.RemoveAt(0);
         }
-        if (is_player == true && text == "glory to the ccp")
+        if (is_player)
         {
-            
+            if(text == "glory to the ccp")
+            {
+                
+            }
+            else if(text == "taiwon good")
+            {
+                
+            }
         }
         // if (){
             // Debug.Log("True")
