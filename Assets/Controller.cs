@@ -201,19 +201,20 @@ public class Controller : MonoBehaviour
 
         }
 
-        if (labor_workers > 10)
+        if (labor_workers == 10)
         {
-            chat.SendMessageToChat("You have a following");
+            chat.SendMessageToChat("You have a following, the CCP has given you 1 worker");
+            labor_workers += 1;
         }
-        else if (labor_workers > 50) 
+        else if (labor_workers == 50) 
         {
             chat.SendMessageToChat("You are now a factory");
         }
-        else if (labor_workers > 100)
+        else if (labor_workers == 100)
         { 
             chat.SendMessageToChat("Your factory is now full and the workers are now angry");
         }
-        else if (labor_workers > 200) ;
+        else if (labor_workers == 200)
         {
             chat.SendMessageToChat("You have too many workers, the people now think that you are a capitalist");
         }
