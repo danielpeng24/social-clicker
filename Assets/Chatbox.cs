@@ -69,18 +69,18 @@ public class Chatbox : MonoBehaviour
 
         if (is_player)
         {
-            if (text == "glory to the ccp")
+            if (text.ToLower() == "glory to the ccp")
             {
                 _controller.boost_time = 103;
                 text = "GLORY TO THE CCP 103 seconds boost";
             }
-            // DANIEL PENG THIS IS NOT HOW YOU CODE, THIS DOES NOT WORK
-            // USE _controller.social_credits
+
+
             
-            // else if (text == "taiwan good")
-            // {
-            //     sc -= 9999
-            // }
+            else if (text.ToLower() == "taiwan good")
+            {
+                _controller.social_credits -= 9999;
+            }
         }
         
         
