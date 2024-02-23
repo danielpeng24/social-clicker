@@ -77,6 +77,7 @@ public class Controller : MonoBehaviour
          time_till_random_comment -= Time.deltaTime;
          if (time_till_random_comment <= 0)
          {
+             
              time_till_random_comment = rng.Next(15, 30);
              if (max_social_credits < 0)
              {
@@ -241,7 +242,8 @@ public class Controller : MonoBehaviour
              chat.SendMessageToChat("CCP: You failed the game, the execution team is headed you way\n");
              // Application.Quit();
          }
-         
-                
-     }
+
+     public float boost_time;
+
+}
 }

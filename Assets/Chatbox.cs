@@ -54,10 +54,18 @@ public class Chatbox : MonoBehaviour
     {
         
         // Comment to Daniel Peng use is_player to check whether or not you should check for key words
+
+        {
+            
+        }
         if (messagelist.Count >= maxmessages)
         {
             Destroy(messagelist[0].textObject.gameObject);
             messagelist.RemoveAt(0);
+        }
+        if (is_player == true && text == "glory to the ccp")
+        {
+            
         }
         // if (){
             // Debug.Log("True")
