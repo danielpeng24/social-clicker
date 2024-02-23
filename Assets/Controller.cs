@@ -14,7 +14,7 @@ public class Controller : MonoBehaviour
     //Change some of the vars to private later after testing
 
     private Random rng = new Random();
-
+    public float boost_time;
     public Chatbox chat;
     private float time_till_random_comment;
     
@@ -244,7 +244,7 @@ public class Controller : MonoBehaviour
              // Application.Quit();
          }
 
-     public float boost_time;
+ 
 
 }
 }
