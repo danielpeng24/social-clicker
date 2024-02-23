@@ -73,6 +73,7 @@ public class Chatbox : MonoBehaviour
             {
                 _controller.boost_time = 103;
                 text = "GLORY TO THE CCP 103 seconds boost";
+                
             }
 
 
