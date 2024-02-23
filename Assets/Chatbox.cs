@@ -7,11 +7,14 @@ using UnityEngine.UIElements;
 
 public class Chatbox : MonoBehaviour
 {
-    public GameObject _controller;
     public int maxmessages = 10;
     public bool selected_chatbox = false;
     public GameObject chatPanel, textObject;
     public InputField chatboxInput;
+
+    public GameObject Controller;
+    private Controller _controller;
+    
 
     List<string> key_words_list = new List<string>();
 
@@ -21,6 +24,8 @@ public class Chatbox : MonoBehaviour
     void Start()
     {
         // key_words_list.Add("mao")
+        _controller = Controller.GetComponent<Controller>();
+
     }
 
     // Update is called once per frame
@@ -66,13 +71,16 @@ public class Chatbox : MonoBehaviour
 
         if (is_player)
         {
-            if (text == "glory to the ccp")
+            if (text == "something")
             {
                 _controller.boost_time = 103;
-
+                text = "GLORY TO THE CCP 103 seconds boost";
             }
+                
         }
-
+        
+        
+        
 
 
         Message newMessage = new Message();

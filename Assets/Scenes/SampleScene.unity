@@ -504,7 +504,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 07da1beb13fa6c546a961e7e393e68ca, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 3ecba6a93c3f19345ab44657e6c1771b, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -677,6 +677,7 @@ MonoBehaviour:
   chatPanel: {fileID: 1363679704}
   textObject: {fileID: 7420423743455142056, guid: 78d87a0b3022a4e429b7807dcb087b4b, type: 3}
   chatboxInput: {fileID: 1497676262}
+  Controller: {fileID: 1346908390}
   messagelist: []
 --- !u!1 &713617079
 GameObject:
@@ -1922,7 +1923,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11ddc6ce804ee743bf261baa59de555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  chat: {fileID: 697825298}
+  boost_time: 0
+  chat: {fileID: 0}
   social_credits: 0
   lose_credits: 0
   labor_workers: 0

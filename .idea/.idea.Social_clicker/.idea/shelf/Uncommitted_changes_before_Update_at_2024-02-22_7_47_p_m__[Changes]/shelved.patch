@@ -1,0 +1,105 @@
+Index: Assets/Chatbox.cs
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>using System.Collections.Generic;\r\nusing UnityEngine;\r\nusing UnityEngine.EventSystems;\r\nusing UnityEngine.UI;\r\nusing UnityEngine.UIElements;\r\n\r\n\r\npublic class Chatbox : MonoBehaviour\r\n{\r\n    public GameObject _controller;\r\n    public int maxmessages = 10;\r\n    public bool selected_chatbox = false;\r\n    public GameObject chatPanel, textObject;\r\n    public InputField chatboxInput;\r\n\r\n    List<string> key_words_list = new List<string>();\r\n    \r\n    \r\n    [SerializeField]\r\n    List<Message> messagelist = new List<Message>();\r\n    void Start()\r\n    {\r\n        // key_words_list.Add(\"mao\")\r\n    }\r\n\r\n    // Update is called once per frame\r\n    void Update()\r\n    {\r\n        if ((EventSystem.current.currentSelectedGameObject == chatboxInput.gameObject || Input.GetKeyDown(KeyCode.Space)) && Input.GetMouseButtonDown(0))\r\n        {\r\n            selected_chatbox = !selected_chatbox;\r\n            if (selected_chatbox)\r\n            {\r\n                chatboxInput.ActivateInputField();\r\n            }\r\n            else\r\n            {\r\n                chatboxInput.DeactivateInputField();\r\n            }\r\n        }\r\n\r\n        if (chatboxInput.text != \"\")\r\n        {\r\n            if (Input.GetKeyDown(KeyCode.Return))\r\n            {\r\n                SendMessageToChat(chatboxInput.text, true);\r\n                chatboxInput.text = \"\";\r\n                chatboxInput.ActivateInputField();\r\n            }\r\n            \r\n        }\r\n    }\r\n\r\n    public void SendMessageToChat(string text, bool is_player=false)\r\n    {\r\n        \r\n        // Comment to Daniel Peng use is_player to check whether or not you should check for key words\r\n        // Checker code\r\n        \r\n        }\r\n        if (messagelist.Count >= maxmessages)\r\n        {\r\n            Destroy(messagelist[0].textObject.gameObject);\r\n            messagelist.RemoveAt(0);\r\n        }\r\n\r\n        if (is_player)\r\n        {\r\n            if (text == \"glory to the ccp\")\r\n            {\r\n                _controller.boost_time = 103;\r\n\r\n            }\r\n        }\r\n        \r\n\r\n\r\n    Message newMessage = new Message();\r\n            \r\n            newMessage.text = text;\r\n\r\n            GameObject newText = Instantiate(textObject, chatPanel.transform);\r\n            \r\n            newMessage.textObject = newText.GetComponent<Text>();\r\n            newMessage.textObject.text = text;\r\n\r\n            \r\n            messagelist.Add(newMessage);\r\n        \r\n}\r\n[System.Serializable]\r\npublic class Message\r\n{\r\n    public string text;\r\n    public Text textObject;\r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/Assets/Chatbox.cs b/Assets/Chatbox.cs
+--- a/Assets/Chatbox.cs	(revision e0651717270cc722cc965499b4c51d68ab8ab99c)
++++ b/Assets/Chatbox.cs	(date 1708649226395)
+@@ -2,25 +2,23 @@
+ using UnityEngine;
+ using UnityEngine.EventSystems;
+ using UnityEngine.UI;
+-using UnityEngine.UIElements;
+ 
+ 
+ public class Chatbox : MonoBehaviour
+ {
+-    public GameObject _controller;
++    public GameObject
+     public int maxmessages = 10;
+     public bool selected_chatbox = false;
+     public GameObject chatPanel, textObject;
+     public InputField chatboxInput;
+-
+-    List<string> key_words_list = new List<string>();
+     
+     
+     [SerializeField]
++    List<string> keywords = new List<string>();
+     List<Message> messagelist = new List<Message>();
+     void Start()
+     {
+-        // key_words_list.Add("mao")
++        keywords.Add("mao");
+     }
+ 
+     // Update is called once per frame
+@@ -43,7 +41,7 @@
+         {
+             if (Input.GetKeyDown(KeyCode.Return))
+             {
+-                SendMessageToChat(chatboxInput.text, true);
++                SendMessageToChat(chatboxInput.text);
+                 chatboxInput.text = "";
+                 chatboxInput.ActivateInputField();
+             }
+@@ -51,42 +49,32 @@
+         }
+     }
+ 
+-    public void SendMessageToChat(string text, bool is_player=false)
++    public void SendMessageToChat(string text)
+     {
+-        
+-        // Comment to Daniel Peng use is_player to check whether or not you should check for key words
+-        // Checker code
+-        
+-        }
+         if (messagelist.Count >= maxmessages)
+         {
+             Destroy(messagelist[0].textObject.gameObject);
+             messagelist.RemoveAt(0);
+         }
+-
+-        if (is_player)
++        if (keywords.Contains(text.ToLower()))
+         {
+-            if (text == "glory to the ccp")
+-            {
+-                _controller.boost_time = 103;
+-
+-            }
++            text = "THANKS FOR THING";
+         }
+         
+ 
+-
+-    Message newMessage = new Message();
+-            
+-            newMessage.text = text;
++        Message newMessage = new Message();
++        
++        newMessage.text = text;
+ 
+-            GameObject newText = Instantiate(textObject, chatPanel.transform);
+-            
+-            newMessage.textObject = newText.GetComponent<Text>();
+-            newMessage.textObject.text = text;
++        GameObject newText = Instantiate(textObject, chatPanel.transform);
++        
++        newMessage.textObject = newText.GetComponent<Text>();
++        newMessage.textObject.text = text;
+ 
+-            
+-            messagelist.Add(newMessage);
+-        
++        
++        messagelist.Add(newMessage);
++
++    }
+ }
+ [System.Serializable]
+ public class Message
