@@ -1,4 +1,5 @@
 using System;
+using System.Net;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -63,148 +64,168 @@ public class Controller : MonoBehaviour
 
      }
 
-//
-     private void Update()
-     {
-         // Add the labor workers social credits
-         social_credits += labor_workers * 0.1f * current_multiplier * Time.deltaTime;
-         // Check if current SC is the largest score there is
-         if (social_credits > max_social_credits)
-         {
-             max_social_credits = social_credits;
-         }
-         // Check for certain ranges to say random comments
-         time_till_random_comment -= Time.deltaTime;
-         if (time_till_random_comment <= 0)
-         {
-             
-             time_till_random_comment = rng.Next(15, 30);
-             if (max_social_credits < 0)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("CCP: Be warned!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("CCP: You are on the list of the outcasts!");
-                 }
-             }
-             else if (max_social_credits == 0)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("CCP: We expect much from you!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("Game: Nobody knows you, and nobody cares!");
-                 }
-             }
-             // Don't ask me know this works, it just does, rider did this not me, I wrote 0 <= max_social_credits && max_social_credits <= 100
-             else if (max_social_credits is >= 0 and <= 100)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("Game: Some people start to see your patriotism!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("Game: You game a little fame");
-                 }
-             }
-             else if (max_social_credits is >= 101 and <= 500)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("Game: Many people start to notice your patriotism!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("CCP: WORK HARD! NOT SMART!");
-                 }
-             }
-             else if (max_social_credits is >= 501 and <= 1500)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("Game: You have gained some fame for your patriotism!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("CCP: WORK HARDER! NOT SMARTER!");
-                 }
-             }
-             else if (max_social_credits is >= 1501 and <= 2000)
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("Game: You are now famous throughout China!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("CCP: You have been recognized!");
-                 }
-             }
-             else
-             {
-                 if (rng.Next(-1, 2) == 0)
-                 {
-                     chat.SendMessageToChat("Game: You are now famous throughout the world!");
-                 }
-                 else
-                 {
-                     chat.SendMessageToChat("Game: People throughout the world praise you for you amount of credits");
-                 }
-             }
-             chat.SendMessageToChat("");
-         }
+    //
+    private void Update()
+    {
+        // Add the labor workers social credits
+        social_credits += labor_workers * 0.1f * current_multiplier * Time.deltaTime;
+        // Check if current SC is the largest score there is
+        if (social_credits > max_social_credits)
+        {
+            max_social_credits = social_credits;
+        }
+        // Check for certain ranges to say random comments
+        time_till_random_comment -= Time.deltaTime;
+        if (time_till_random_comment <= 0)
+        {
 
-         // check for rewards
-         switch (current_stage_of_achievements)
-         {
-             case 0:
-                 if (max_social_credits > 500)
-                 {
-                     current_stage_of_achievements++;
-                     current_multiplier += 0.025f;
-                     chat.SendMessageToChat("Game: congratulations on getting better schooling +2.5% permanent SC boost");
-                 }
-                 break;
-             case 1:
-                 if (max_social_credits > 1000)
-                 {
-                     current_stage_of_achievements++;
-                     current_multiplier += 0.05f;
-                     chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent SC boost");
-                 }
+            time_till_random_comment = rng.Next(15, 30);
+            if (max_social_credits < 0)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("CCP: Be warned!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("CCP: You are on the list of the outcasts!");
+                }
+            }
+            else if (max_social_credits == 0)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("CCP: We expect much from you!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("Game: Nobody knows you, and nobody cares!");
+                }
+            }
+            // Don't ask me know this works, it just does, rider did this not me, I wrote 0 <= max_social_credits && max_social_credits <= 100
+            else if (max_social_credits is >= 0 and <= 100)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("Game: Some people start to see your patriotism!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("Game: You game a little fame");
+                }
+            }
+            else if (max_social_credits is >= 101 and <= 500)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("Game: Many people start to notice your patriotism!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("CCP: WORK HARD! NOT SMART!");
+                }
+            }
+            else if (max_social_credits is >= 501 and <= 1500)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("Game: You have gained some fame for your patriotism!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("CCP: WORK HARDER! NOT SMARTER!");
+                }
+            }
+            else if (max_social_credits is >= 1501 and <= 2000)
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("Game: You are now famous throughout China!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("CCP: You have been recognized!");
+                }
+            }
+            else
+            {
+                if (rng.Next(-1, 2) == 0)
+                {
+                    chat.SendMessageToChat("Game: You are now famous throughout the world!");
+                }
+                else
+                {
+                    chat.SendMessageToChat("Game: People throughout the world praise you for you amount of credits");
+                }
+            }
+            chat.SendMessageToChat("");
+        }
 
-                 break;
-             case 2:
-                 if (max_social_credits > 2000)
-                 {
-                     current_stage_of_achievements++;
-                     current_multiplier += 0.1f;
-                     chat.SendMessageToChat("you got a job +10% permanent sc boost");
-                 }
+        // check for rewards
+        switch (current_stage_of_achievements)
+        {
+            case 0:
+                if (max_social_credits > 500)
+                {
+                    current_stage_of_achievements++;
+                    current_multiplier += 0.025f;
+                    chat.SendMessageToChat("Game: congratulations on getting better schooling +2.5% permanent SC boost");
+                }
+                break;
+            case 1:
+                if (max_social_credits > 1000)
+                {
+                    current_stage_of_achievements++;
+                    current_multiplier += 0.05f;
+                    chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent SC boost");
+                }
 
-                 break;
-             case 3:
-                 if (max_social_credits > 100000)
-                 {
-                     current_stage_of_achievements++;
-                     current_multiplier += 1f;
-                     chat.SendMessageToChat("Game: you become a member of the ccp +100% permanent SC boost");
-                 }
-                 break;
-                 
-         }
-         // check if we have more than 2000 SC and increment the job promotion of +2.5%
-         if ((max_social_credits - 2500) / 1000 > job_promotions)
-         {
-             job_promotions++;
-             current_multiplier += 0.025f;
-         }
+                break;
+            case 2:
+                if (max_social_credits > 2000)
+                {
+                    current_stage_of_achievements++;
+                    current_multiplier += 0.1f;
+                    chat.SendMessageToChat("you got a job +10% permanent sc boost");
+                }
+
+                break;
+            case 3:
+                if (max_social_credits > 100000)
+                {
+                    current_stage_of_achievements++;
+                    current_multiplier += 1f;
+                    chat.SendMessageToChat("Game: you become a member of the ccp +100% permanent SC boost");
+                }
+                break;
+
+        }
+
+        if (labor_workers == 10)
+        {
+            chat.SendMessageToChat("You have a following, the CCP has given you 1 worker");
+            labor_workers += 1;
+        }
+        else if (labor_workers == 50) 
+        {
+            chat.SendMessageToChat("You are now a factory");
+        }
+        else if (labor_workers == 100)
+        { 
+            chat.SendMessageToChat("Your factory is now full and the workers are now angry");
+        }
+        else if (labor_workers == 200)
+        {
+            chat.SendMessageToChat("You have too many workers, the people now think that you are a captitalist");
+        }
+
+
+        // check if we have more than 2000 SC and increment the job promotion of +2.5%
+        if ((max_social_credits - 2500) / 1000 > job_promotions)
+                            {
+                                job_promotions++;
+                                current_multiplier += 0.025f;
+                            }
          
          // check for punishments
          if (Time.time - last_time_clicked > max_time_not_clicked)
