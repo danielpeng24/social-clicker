@@ -1924,7 +1924,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   boost_time: 0
-  chat: {fileID: 0}
+  chat: {fileID: 697825298}
   social_credits: 0
   lose_credits: 0
   labor_workers: 0
