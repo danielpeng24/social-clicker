@@ -1,5 +1,6 @@
 using System;
 using System.Net;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
@@ -49,7 +50,8 @@ public class Controller : MonoBehaviour
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
 
-
+    public GameObject Canvas;
+    
     public GameObject taiwan_button;
     private Transform taiwan_current_location;
     private float time_till_taiwan_spawns;
@@ -294,8 +296,8 @@ public class Controller : MonoBehaviour
             // Application.Quit();
         }
 
-        time_till_taiwan_spawns -= Time.deltaTime;
-        if (time_till_taiwan_spawns < 0)
+        // time_till_taiwan_spawns -= Time.deltaTime;
+        if (time_till_taiwan_spawns == 0)
         {
 
             Vector3 rand_location = new Vector3();
@@ -304,7 +306,9 @@ public class Controller : MonoBehaviour
             rand_location.z = 0f;
             taiwan_current_location.position = rand_location;
             GameObject spawed_taiwan = Instantiate(taiwan_button, taiwan_current_location);
+            spawed_taiwan.transform.SetParent(Canvas.transform);
             Debug.Log("Spawed Taiwan");
+            time_till_taiwan_spawns -= 1;
         }
 
 
