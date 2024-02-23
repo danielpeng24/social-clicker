@@ -4,7 +4,6 @@ using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Random = System.Random;
 
-//GRRRR
 
 public class Controller : MonoBehaviour
 {
