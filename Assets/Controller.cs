@@ -249,7 +249,7 @@ public class Controller : MonoBehaviour
 
         if (lose_credits)
         {
-            social_credits -= ((float)0.95 * social_credits * Time.deltaTime);
+            social_credits -= Math.Abs((float)0.95 * social_credits * Time.deltaTime);
         }
 
         if (is_strike && Time.time - strike_time_start >= 2.5)
