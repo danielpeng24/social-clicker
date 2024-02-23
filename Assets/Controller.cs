@@ -140,7 +140,7 @@ public class Controller : MonoBehaviour
              {
                  if (rng.Next(-1, 2) == 0)
                  {
-                     chat.SendMessageToChat("Game: You have gained now famous throughout China!");
+                     chat.SendMessageToChat("Game: You are now famous throughout China!");
                  }
                  else
                  {
@@ -155,7 +155,7 @@ public class Controller : MonoBehaviour
                  }
                  else
                  {
-                     chat.SendMessageToChat("Game: People throughout the world praise you for the amount of credit");
+                     chat.SendMessageToChat("Game: People throughout the world praise you for you amount of credits");
                  }
              }
              chat.SendMessageToChat("");
@@ -167,19 +167,17 @@ public class Controller : MonoBehaviour
              case 0:
                  if (max_social_credits > 500)
                  {
-                     // Say in chat "Gained Better Schooling" 
                      current_stage_of_achievements++;
                      current_multiplier += 0.025f;
-                     chat.SendMessageToChat("Game: congratulations on getting better schooling +2.5% permanent sc boost");
+                     chat.SendMessageToChat("Game: congratulations on getting better schooling +2.5% permanent SC boost");
                  }
                  break;
              case 1:
                  if (max_social_credits > 1000)
                  {
-                     //Say in chat "Admitted to a Great University" 
                      current_stage_of_achievements++;
                      current_multiplier += 0.05f;
-                     chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent sc boost");
+                     chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent SC boost");
                  }
 
                  break;
@@ -197,7 +195,7 @@ public class Controller : MonoBehaviour
                  {
                      current_stage_of_achievements++;
                      current_multiplier += 1f;
-                     chat.SendMessageToChat("Game: you become a member of the ccp +100% permanent sc boost");
+                     chat.SendMessageToChat("Game: you become a member of the ccp +100% permanent SC boost");
                  }
                  break;
                  
@@ -229,7 +227,7 @@ public class Controller : MonoBehaviour
              social_credits *= ((float)0.95 * Time.deltaTime);
          }
 
-         if (is_strike && Time.time - strike_time_start >= 1.5)
+         if (is_strike && Time.time - strike_time_start >= 2.5)
          {
              is_strike = false;
              strike_sprite_renderer.enabled = false;
