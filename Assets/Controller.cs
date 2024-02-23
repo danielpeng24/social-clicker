@@ -17,9 +17,8 @@ public class Controller : MonoBehaviour
     public float boost_time;
     public Chatbox chat;
     private float time_till_random_comment;
-   
-  
-
+    
+    
     public float social_credits;
     private float max_social_credits;
 
@@ -50,6 +49,17 @@ public class Controller : MonoBehaviour
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
 
+
+    public GameObject taiwan_button;
+    private Transform taiwan_current_location;
+    private float time_till_taiwan_spawns;
+    private bool taiwan_pressed;
+
+    public void Is_taiwan_pressed()
+    {
+        taiwan_pressed = true;
+    }
+
      private void Start()
      {
          
@@ -61,6 +71,10 @@ public class Controller : MonoBehaviour
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
          time_till_random_comment = rng.Next(3, 10);
+         // time_till_taiwan_spawns = rng.Next(30, 60);
+         taiwan_current_location = taiwan_button.GetComponent<Transform>();
+         time_till_taiwan_spawns = 0;
+         
 
      }
 
@@ -280,7 +294,22 @@ public class Controller : MonoBehaviour
             // Application.Quit();
         }
 
- 
+        time_till_taiwan_spawns -= Time.deltaTime;
+        if (time_till_taiwan_spawns < 0)
+        {
 
-}
+            Vector3 rand_location = new Vector3();
+            rand_location.x = rng.Next(0, 500);
+            rand_location.y = rng.Next(0, 500);
+            rand_location.z = 0f;
+            taiwan_current_location.position = rand_location;
+            GameObject spawed_taiwan = Instantiate(taiwan_button, taiwan_current_location);
+            Debug.Log("Spawed Taiwan");
+        }
+
+
+
+
+
+    }
 }

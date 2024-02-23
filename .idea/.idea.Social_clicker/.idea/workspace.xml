@@ -4,7 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Added taiwan script and deleted useless braces in Controller.cs." />
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Updated unity scene">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controller.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Taiwan_button.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Taiwan_button.prefab" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -28,11 +32,15 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/cd/8bcee734/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfc17dda9cbb441b8dc74d81535b7d4f10200/c1/4373f8f1/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Social_credits.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Taiwan_script.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
@@ -128,7 +136,7 @@
       <workItem from="1708649940870" duration="86000" />
       <workItem from="1708650084826" duration="5660000" />
       <workItem from="1708707315623" duration="4138000" />
-      <workItem from="1708712937060" duration="762000" />
+      <workItem from="1708712937060" duration="2489000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -322,7 +330,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708713677456</updated>
     </task>
-    <option name="localTasksCounter" value="25" />
+    <task id="LOCAL-00025" summary="Updated and fixed controller.cs along with adding chatbox to the public input.">
+      <option name="closed" value="true" />
+      <created>1708713786175</created>
+      <option name="number" value="00025" />
+      <option name="presentableId" value="LOCAL-00025" />
+      <option name="project" value="LOCAL" />
+      <updated>1708713786175</updated>
+    </task>
+    <task id="LOCAL-00026" summary="Updated unity scene">
+      <option name="closed" value="true" />
+      <created>1708713795126</created>
+      <option name="number" value="00026" />
+      <option name="presentableId" value="LOCAL-00026" />
+      <option name="project" value="LOCAL" />
+      <updated>1708713795126</updated>
+    </task>
+    <option name="localTasksCounter" value="27" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -354,9 +378,10 @@
     <MESSAGE value="Update from origin main" />
     <MESSAGE value="Fixed bug" />
     <MESSAGE value="Uncommented projectsettings" />
-    <MESSAGE value="Updated unity scene" />
     <MESSAGE value="Fixed social credits bug when credits where negative" />
     <MESSAGE value="Added taiwan script and deleted useless braces in Controller.cs." />
-    <option name="LAST_COMMIT_MESSAGE" value="Added taiwan script and deleted useless braces in Controller.cs." />
+    <MESSAGE value="Updated and fixed controller.cs along with adding chatbox to the public input." />
+    <MESSAGE value="Updated unity scene" />
+    <option name="LAST_COMMIT_MESSAGE" value="Updated unity scene" />
   </component>
 </project>

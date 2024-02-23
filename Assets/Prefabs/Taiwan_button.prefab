@@ -1,6 +1,6 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1545569764613118731
+--- !u!1 &2006513145089869821
 GameObject:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -8,11 +8,10 @@ GameObject:
   m_PrefabAsset: {fileID: 0}
   serializedVersion: 6
   m_Component:
-  - component: {fileID: 5882841959715969022}
-  - component: {fileID: 8966149289524769987}
-  - component: {fileID: 6667522377359048143}
-  - component: {fileID: 4601859540866901322}
-  - component: {fileID: 367641519367384874}
+  - component: {fileID: 2929622390404166575}
+  - component: {fileID: 981064503239465622}
+  - component: {fileID: 2987371971323991856}
+  - component: {fileID: 884210038568071852}
   m_Layer: 5
   m_Name: Taiwan_button
   m_TagString: Untagged
@@ -20,13 +19,13 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!224 &5882841959715969022
+--- !u!224 &2929622390404166575
 RectTransform:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545569764613118731}
+  m_GameObject: {fileID: 2006513145089869821}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
@@ -39,21 +38,21 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 337.18, y: 303.13}
   m_Pivot: {x: 0.5, y: 0.5}
---- !u!222 &8966149289524769987
+--- !u!222 &981064503239465622
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545569764613118731}
+  m_GameObject: {fileID: 2006513145089869821}
   m_CullTransparentMesh: 1
---- !u!114 &6667522377359048143
+--- !u!114 &2987371971323991856
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545569764613118731}
+  m_GameObject: {fileID: 2006513145089869821}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
@@ -77,13 +76,13 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &4601859540866901322
+--- !u!114 &884210038568071852
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545569764613118731}
+  m_GameObject: {fileID: 2006513145089869821}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 4e29b1a8efbd4b44bb3f3716e73f07ff, type: 3}
@@ -117,13 +116,13 @@ MonoBehaviour:
     m_SelectedTrigger: Selected
     m_DisabledTrigger: Disabled
   m_Interactable: 1
-  m_TargetGraphic: {fileID: 6667522377359048143}
+  m_TargetGraphic: {fileID: 2987371971323991856}
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 367641519367384874}
-        m_TargetAssemblyTypeName: Taiwan_script, Assembly-CSharp
-        m_MethodName: Is_click
+      - m_Target: {fileID: 0}
+        m_TargetAssemblyTypeName: Controller, Assembly-CSharp
+        m_MethodName: Is_taiwan_pressed
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -133,16 +132,3 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
---- !u!114 &367641519367384874
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1545569764613118731}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: c11d04c956ab33a43a86a799eb898fc4, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  pressed: 0
