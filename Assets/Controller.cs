@@ -49,11 +49,9 @@ public class Controller : MonoBehaviour
     
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
-
-    public GameObject Canvas;
     
     public GameObject taiwan_button;
-    private Transform taiwan_current_location;
+    private Transform taiwan_current_position;
     private float time_till_taiwan_spawns;
     private bool taiwan_pressed;
 
@@ -73,11 +71,10 @@ public class Controller : MonoBehaviour
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
          time_till_random_comment = rng.Next(3, 10);
-         // time_till_taiwan_spawns = rng.Next(30, 60);
-         taiwan_current_location = taiwan_button.GetComponent<Transform>();
-         time_till_taiwan_spawns = 0;
          
-
+         time_till_taiwan_spawns = 0;
+         taiwan_current_position = taiwan_button.GetComponent<Transform>();
+         
      }
 
     //
@@ -296,19 +293,25 @@ public class Controller : MonoBehaviour
             // Application.Quit();
         }
 
-        // time_till_taiwan_spawns -= Time.deltaTime;
+        time_till_taiwan_spawns -= Time.deltaTime;
         if (time_till_taiwan_spawns == 0)
         {
-
+        
             Vector3 rand_location = new Vector3();
-            rand_location.x = rng.Next(0, 500);
-            rand_location.y = rng.Next(0, 500);
+            rand_location.x = rng.Next(-100, 100);
+            rand_location.y = rng.Next(-100, 100);
             rand_location.z = 0f;
-            taiwan_current_location.position = rand_location;
-            GameObject spawed_taiwan = Instantiate(taiwan_button, taiwan_current_location);
-            spawed_taiwan.transform.SetParent(Canvas.transform);
+            taiwan_current_position.position = rand_location;
+            // taiwan_button.clickable. = false;
+            taiwan_button.SetActive(true);
             Debug.Log("Spawed Taiwan");
             time_till_taiwan_spawns -= 1;
+            // if (taiwan_pressed)
+            // {
+            //     taiwan_button.SetActive(false);
+            //     taiwan_pressed = false;
+            //     time_till_taiwan_spawns = rng.Next(20, 60);
+            // }
         }
 
 
