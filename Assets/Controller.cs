@@ -262,7 +262,7 @@ public class Controller : MonoBehaviour
 
          if (boost_time > 0)
          {
-             
+             boost_time -= Time.time;
              if ((int)boost_time == 103)
              {
                  current_multiplier += 1.0f;
@@ -271,8 +271,7 @@ public class Controller : MonoBehaviour
              {
                  current_multiplier -= 1.0f;
              }
-
-             boost_time -= Time.time;
+             
          }
 
          {
