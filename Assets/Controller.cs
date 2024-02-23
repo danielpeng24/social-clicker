@@ -3,8 +3,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Random = System.Random;
-using UnityEngine.UI;
-//GRRRR
+
 
 public class Controller : MonoBehaviour
 {
@@ -18,6 +17,8 @@ public class Controller : MonoBehaviour
     public Chatbox chat;
     private float time_till_random_comment;
    
+  
+
     public float social_credits;
     private float max_social_credits;
 
@@ -233,6 +234,24 @@ public class Controller : MonoBehaviour
              last_time_clicked = Time.time;
          }
 
+         if (boost_time > 0)
+         {
+             
+             if ((int)boost_time == 103)
+             {
+                 current_multiplier += 1.0f;
+             }
+             else if ((int)boost_time == 0)
+             {
+                 current_multiplier -= 1.0f;
+             }
+
+             boost_time -= Time.time;
+         }
+
+         {
+             
+         }
          if (number_of_strikes >= max_number_of_strikes)
          {
              execution_sprite_renderer.enabled = true;

@@ -4,7 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Added more things controller.cs">
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Added vine boom, and made sure that Daniel's garbage code is commented out">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -30,11 +30,14 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfc17dda9cbb441b8dc74d81535b7d4f10200/c1/4373f8f1/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Social_credits.cs" root0="FORCE_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
@@ -127,7 +130,7 @@
       <workItem from="1708647393011" duration="1229000" />
       <workItem from="1708648647010" duration="1262000" />
       <workItem from="1708649940870" duration="86000" />
-      <workItem from="1708650084826" duration="2216000" />
+      <workItem from="1708650084826" duration="4343000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -225,7 +228,15 @@
       <option name="project" value="LOCAL" />
       <updated>1708650905179</updated>
     </task>
-    <option name="localTasksCounter" value="13" />
+    <task id="LOCAL-00013" summary="Added vine boom, and made sure that Daniel's garbage code is commented out">
+      <option name="closed" value="true" />
+      <created>1708653059181</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708653059181</updated>
+    </task>
+    <option name="localTasksCounter" value="14" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -248,6 +259,7 @@
     <MESSAGE value="good luck merging" />
     <MESSAGE value="something good, also someone add back the music, we screwed something up" />
     <MESSAGE value="Added more things controller.cs" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more things controller.cs" />
+    <MESSAGE value="Added vine boom, and made sure that Daniel's garbage code is commented out" />
+    <option name="LAST_COMMIT_MESSAGE" value="Added vine boom, and made sure that Daniel's garbage code is commented out" />
   </component>
 </project>
