@@ -159,7 +159,6 @@ public class Controller : MonoBehaviour
              }
              chat.SendMessageToChat("");
          }
-
          // check for rewards
          switch (current_stage_of_achievements)
          {
@@ -223,7 +222,7 @@ public class Controller : MonoBehaviour
 
          if (lose_credits)
          {
-             social_credits *= ((float)0.95 * Time.deltaTime);
+             social_credits -= ((float)0.5 * social_credits * Time.deltaTime);
          }
 
          if (is_strike && Time.time - strike_time_start >= 2.5)
