@@ -4,7 +4,10 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="" />
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/SampleScene.unity" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -14,15 +17,10 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
   <component name="HighlightingSettingsPerFile">
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Labor_workers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Labor_workers.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Social_credits.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Sprites/worker_buttons.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Social_credits.cs" root0="SKIP_HIGHLIGHTING" />
   </component>
   <component name="MarkdownSettingsMigration">
     <option name="stateVersion" value="1" />
@@ -105,6 +103,9 @@
       <updated>1708571033979</updated>
       <workItem from="1708571041617" duration="1574000" />
       <workItem from="1708573440378" duration="3341000" />
+      <workItem from="1708624306540" duration="761000" />
+      <workItem from="1708630067268" duration="102000" />
+      <workItem from="1708647393011" duration="543000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -130,7 +131,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708576756980</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="update">
+      <option name="closed" value="true" />
+      <created>1708624339237</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624339237</updated>
+    </task>
+    <task id="LOCAL-00005" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708624463418</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624463418</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -144,6 +161,8 @@
     <MESSAGE value="Update code to be bettwe, added the latest sprites and made them work with Controller.cs" />
     <MESSAGE value="Add more improvements to code and updated to use newer buttons along with added some public/CCP comments when a certain amount of SC is gained" />
     <MESSAGE value="Added more random things" />
-    <option name="LAST_COMMIT_MESSAGE" value="Added more random things" />
+    <MESSAGE value="update" />
+    <MESSAGE value="Update" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update" />
   </component>
 </project>
