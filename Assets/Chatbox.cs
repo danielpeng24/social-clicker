@@ -7,6 +7,7 @@ using UnityEngine.UIElements;
 
 public class Chatbox : MonoBehaviour
 {
+    public GameObject _controller;
     public int maxmessages = 10;
     public bool selected_chatbox = false;
     public GameObject chatPanel, textObject;
@@ -54,38 +55,38 @@ public class Chatbox : MonoBehaviour
     {
         
         // Comment to Daniel Peng use is_player to check whether or not you should check for key words
-
-        {
-            
+        // Checker code
+        
         }
         if (messagelist.Count >= maxmessages)
         {
             Destroy(messagelist[0].textObject.gameObject);
             messagelist.RemoveAt(0);
         }
-        if (is_player == true && text == "glory to the ccp")
+
+        if (is_player)
         {
-            
+            if (text == "glory to the ccp")
+            {
+                _controller.boost_time = 103;
+
+            }
         }
-        // if (){
-            // Debug.Log("True")
-        // }
-
         
 
-        Message newMessage = new Message();
-        
-        newMessage.text = text;
 
-        GameObject newText = Instantiate(textObject, chatPanel.transform);
-        
-        newMessage.textObject = newText.GetComponent<Text>();
-        newMessage.textObject.text = text;
+    Message newMessage = new Message();
+            
+            newMessage.text = text;
 
-        
-        messagelist.Add(newMessage);
+            GameObject newText = Instantiate(textObject, chatPanel.transform);
+            
+            newMessage.textObject = newText.GetComponent<Text>();
+            newMessage.textObject.text = text;
 
-    }
+            
+            messagelist.Add(newMessage);
+        
 }
 [System.Serializable]
 public class Message
