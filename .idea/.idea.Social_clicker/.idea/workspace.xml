@@ -4,12 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Unrendered the CCP strike image">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Chatbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Chatbox.cs" afterDir="false" />
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="update">
       <change beforePath="$PROJECT_DIR$/Assets/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Player.cs.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -40,7 +36,10 @@
     <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Social_credits.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Runtime/UI/Core/ScrollRect.cs" root0="SKIP_HIGHLIGHTING" />
@@ -138,7 +137,7 @@
       <workItem from="1708650084826" duration="5660000" />
       <workItem from="1708707315623" duration="4138000" />
       <workItem from="1708712937060" duration="3851000" />
-      <workItem from="1708730159173" duration="7503000" />
+      <workItem from="1708730159173" duration="7819000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -396,7 +395,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708734944589</updated>
     </task>
-    <option name="localTasksCounter" value="33" />
+    <task id="LOCAL-00033" summary="Major Update of bug fixes, boost time still doesn't work">
+      <option name="closed" value="true" />
+      <created>1708739452086</created>
+      <option name="number" value="00033" />
+      <option name="presentableId" value="LOCAL-00033" />
+      <option name="project" value="LOCAL" />
+      <updated>1708739452086</updated>
+    </task>
+    <task id="LOCAL-00034" summary="update">
+      <option name="closed" value="true" />
+      <created>1708739538152</created>
+      <option name="number" value="00034" />
+      <option name="presentableId" value="LOCAL-00034" />
+      <option name="project" value="LOCAL" />
+      <updated>1708739538152</updated>
+    </task>
+    <option name="localTasksCounter" value="35" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -407,8 +422,6 @@
   <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Updated scene" />
-    <MESSAGE value="..." />
     <MESSAGE value="new gitignore" />
     <MESSAGE value="bru" />
     <MESSAGE value="good luck merging" />
@@ -432,6 +445,8 @@
     <MESSAGE value="Deleted old background and made the scene incorperate the new background. Attack taiwan is still not finished" />
     <MESSAGE value="Finished taiwan and refactored the punishment code. Added button for attacking taiwan. Currently there is only a punishment of a strike for not clicking taiwan." />
     <MESSAGE value="Unrendered the CCP strike image" />
-    <option name="LAST_COMMIT_MESSAGE" value="Unrendered the CCP strike image" />
+    <MESSAGE value="Major Update of bug fixes, boost time still doesn't work" />
+    <MESSAGE value="update" />
+    <option name="LAST_COMMIT_MESSAGE" value="update" />
   </component>
 </project>

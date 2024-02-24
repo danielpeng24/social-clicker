@@ -18,7 +18,7 @@ public class Controller : MonoBehaviour
     
     // Clever variable use, where this starts at -1 in order to not have our multiplier set to 0 at the start by the 
     // boost reset which occurs at boost_time == 0.
-    public float boost_time = -2;
+    public float boost_time = -1f;
     public Chatbox chat;
     private float time_till_random_comment;
     
