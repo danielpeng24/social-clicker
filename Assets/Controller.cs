@@ -1,11 +1,14 @@
 using System;
 using System.Net;
-// using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.UIElements;
 using Random = System.Random;
 
+/*
+ * Everything that isn't stated to be written by Brian is
+ * 
+ * */
 
 public class Controller : MonoBehaviour
 {

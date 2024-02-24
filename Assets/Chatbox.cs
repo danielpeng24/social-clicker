@@ -21,9 +21,7 @@ public class Chatbox : MonoBehaviour
 
     void Start()
     {
-        // key_words_list.Add("mao")
         _controller = Controller.GetComponent<Controller>();
-
     }
 
     // Update is called once per frame
@@ -67,6 +65,7 @@ public class Chatbox : MonoBehaviour
             messagelist.RemoveAt(0);
         }
 
+        //Written by Daniel Peng
         if (is_player)
         {
             if (text.ToLower() == "glory to the ccp")
@@ -83,10 +82,7 @@ public class Chatbox : MonoBehaviour
             }
         }
         
-        
-        
-
-
+        // Written by Brian
         Message newMessage = new Message();
 
         newMessage.text = text;
