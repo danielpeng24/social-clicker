@@ -6,17 +6,13 @@ using UnityEngine.UI;
 public class Chatbox : MonoBehaviour
 {
     public int maxmessages = 10;
-    public bool selected_chatbox = false;
+    public bool selected_chatbox;
     public GameObject chatPanel, textObject;
     public InputField chatboxInput;
 
     public GameObject Controller;
     private Controller _controller;
     
-
-    List<string> key_words_list = new List<string>();
-
-
     [SerializeField] List<Message> messagelist = new List<Message>();
 
     void Start()
@@ -65,13 +61,13 @@ public class Chatbox : MonoBehaviour
             messagelist.RemoveAt(0);
         }
 
-        //Written by Daniel Peng
+        //Written by Daniel Peng, _controller.number_of_strike++; by Brian
         if (is_player)
         {
             if (text.ToLower() == "glory to the ccp")
             {
                 _controller.boost_time = 103;
-                text = "\nGLORY TO THE CCP 103 seconds boost";
+                text = "\nGLORY TO THE CCP 103 seconds boost, Chairman Mao is proud";
                 
             }
             else if (text.ToLower() == "taiwan good")
@@ -79,7 +75,7 @@ public class Chatbox : MonoBehaviour
                 _controller.social_credits -= 9999;
                 _controller.taiwan_strike = true;
                 _controller.number_of_strikes++;
-                text = "You lost 9999 social credits";
+                text = "You lost 9999 social credits, Chairman Mao is angry";
             }
         }
         

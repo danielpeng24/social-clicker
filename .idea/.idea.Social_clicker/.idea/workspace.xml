@@ -4,11 +4,12 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Renamed and updated the execution image renderer">
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Replaced v1 with v2 ccp_strike image. (Deleted strike 1 and renamed v2 -&gt; ccpstrike.png)">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Chatbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Chatbox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ccpstrike.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ccpstrike.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Labor_workers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Labor_workers.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Social_credits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Social_credits.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -37,6 +38,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/6f7018b8b8c149e68c4a65a05ac289be175400/cd/8bcee734/Object.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/dfc17dda9cbb441b8dc74d81535b7d4f10200/c1/4373f8f1/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
@@ -47,6 +49,8 @@
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
@@ -147,7 +151,7 @@
       <workItem from="1708650084826" duration="5660000" />
       <workItem from="1708707315623" duration="4138000" />
       <workItem from="1708712937060" duration="3851000" />
-      <workItem from="1708730159173" duration="9491000" />
+      <workItem from="1708730159173" duration="10258000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -453,7 +457,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708740594606</updated>
     </task>
-    <option name="localTasksCounter" value="39" />
+    <task id="LOCAL-00039" summary="Update strike image">
+      <option name="closed" value="true" />
+      <created>1708741524160</created>
+      <option name="number" value="00039" />
+      <option name="presentableId" value="LOCAL-00039" />
+      <option name="project" value="LOCAL" />
+      <updated>1708741524160</updated>
+    </task>
+    <task id="LOCAL-00040" summary="Replaced v1 with v2 ccp_strike image. (Deleted strike 1 and renamed v2 -&gt; ccpstrike.png)">
+      <option name="closed" value="true" />
+      <created>1708741615630</created>
+      <option name="number" value="00040" />
+      <option name="presentableId" value="LOCAL-00040" />
+      <option name="project" value="LOCAL" />
+      <updated>1708741615631</updated>
+    </task>
+    <option name="localTasksCounter" value="41" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -475,8 +495,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="Added more things controller.cs" />
-    <MESSAGE value="Added vine boom, and made sure that Daniel's garbage code is commented out" />
     <MESSAGE value="test" />
     <MESSAGE value="Update to correct for test" />
     <MESSAGE value="Fixed bug where social credits -&gt; 0 when strike." />
@@ -500,6 +518,8 @@
     <MESSAGE value="Minor comments" />
     <MESSAGE value="Deleted usless imports" />
     <MESSAGE value="Renamed and updated the execution image renderer" />
-    <option name="LAST_COMMIT_MESSAGE" value="Renamed and updated the execution image renderer" />
+    <MESSAGE value="Update strike image" />
+    <MESSAGE value="Replaced v1 with v2 ccp_strike image. (Deleted strike 1 and renamed v2 -&gt; ccpstrike.png)" />
+    <option name="LAST_COMMIT_MESSAGE" value="Replaced v1 with v2 ccp_strike image. (Deleted strike 1 and renamed v2 -&gt; ccpstrike.png)" />
   </component>
 </project>

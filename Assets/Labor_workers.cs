@@ -8,18 +8,14 @@ public class Labor_workers : MonoBehaviour
     private Controller _controller;
 
     public Text Cost_text;
-
-    // public GameObject Button_text;
+    
     public Text Labor_workers_text;
     
     void Start()
     {
         _controller = Contoller.GetComponent<Controller>();
-        // _cost_text = transform.Find("Cost text").GetComponent<Text>();
-        // _labor_workers_text = transform.Find("Workers text").GetComponent<Text>();
     }
-
-    // Update is called once per frame
+    
     public void Add_labor_workers()
     {
         if (_controller.social_credits >= _controller.labor_workers_cost)

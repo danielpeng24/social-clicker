@@ -10,9 +10,7 @@ using Random = System.Random;
 public class Controller : MonoBehaviour
 {
     // Literally do not care about the naming scheme,
-    // Too bad, python's naming has taken over, I'm not Capitalizing the second word, I'm using _
-    
-    //Change some of the vars to private later after testing
+    // Too bad, python's naming has taken over, I'm not Capitalizing the second word, I'm using "_"
 
     private Random rng = new Random();
     
@@ -39,30 +37,31 @@ public class Controller : MonoBehaviour
 
     private int current_stage_of_achievements;
     private int job_promotions;
-
+    
+    public GameObject taiwan_button;
+    private Transform taiwan_current_position;
+    private float time_till_taiwan_spawns;
+    private bool taiwan_pressed;
+    
+    //Punishments
+    // vars involving strikes
+    private bool is_strike;
     public int number_of_strikes;
     public int max_number_of_strikes = 3;
-    
-    private bool is_strike;
     public GameObject strike_image;
     private SpriteRenderer strike_sprite_renderer;
     private AudioSource strike_audio;
     private float strike_time_start;
-
+    // vars involving clicking the taiwan image, if not we have a taiwan strike
     public bool taiwan_strike;
     public GameObject taiwan_strike_image;
     private SpriteRenderer taiwan_strike_sprite_renderer;
     private AudioSource taiwan_strike_audio;
     private float taiwan_strike_time_start;
     
-    
+    // If 3 strikes are given, the execution team heads over and the game ends.
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
-    
-    public GameObject taiwan_button;
-    private Transform taiwan_current_position;
-    private float time_till_taiwan_spawns;
-    private bool taiwan_pressed;
 
     public void Is_taiwan_pressed()
     {
@@ -376,13 +375,5 @@ public class Controller : MonoBehaviour
         {
             TAIWAN_STRIKE(false);
         }
-
-
-        
-
-
-
-
-
     }
 }
