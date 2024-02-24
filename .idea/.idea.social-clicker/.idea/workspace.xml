@@ -1,0 +1,305 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="fb872a5e-87c5-4cbc-8910-3705fe63d095" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.social-clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.social-clicker/.idea/workspace.xml" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/Assets/Chatbox.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dpeng/Desktop/Unity_projects/social-clicker/Assets/Chatbox.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dpeng/Desktop/Unity_projects/social-clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Social_credits.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dpeng/Desktop/Unity_projects/social-clicker/Assets/Sprites/taiwanbad.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dpeng/Desktop/Unity_projects/social-clicker/Assets/Sprites/taiwanbad.png.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dpeng/Desktop/Unity_projects/social-clicker/Assets/Sprites/taiwanbad.png.meta" root0="SKIP_HIGHLIGHTING" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="MetaFilesCheckinStateConfiguration" checkMetaFiles="true" />
+  <component name="ProblemsViewState">
+    <option name="selectedTabId" value="CurrentFile" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 2
+}</component>
+  <component name="ProjectId" id="2cgfpr6Hs0HcHK45Kb3tTn0bONI" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;do_not_show_solution_notification&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;editor.preferences.fonts.default&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\dpeng\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\dpeng\\AppData\\Roaming\\JetBrains\\Rider2023.3\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\dpeng\\AppData\\Local\\Symbols\\src&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Attach to Unity Editor.Attach to Unity Editor">
+    <configuration name="Start Unity" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-projectPath C:\Users\dpeng\Desktop\Unity_projects\social-clicker -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\dpeng\Desktop\Unity_projects\social-clicker" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Unit Tests (batch mode)" type="RunUnityExe" factoryName="Unity Executable">
+      <option name="EXE_PATH" value="C:\Program Files\Unity\Hub\Editor\2022.3.20f1\Editor\Unity.exe" />
+      <option name="PROGRAM_PARAMETERS" value="-runTests -batchmode -projectPath C:\Users\dpeng\Desktop\Unity_projects\social-clicker -testResults Logs/results.xml -testPlatform EditMode -debugCodeOptimization" />
+      <option name="WORKING_DIRECTORY" value="C:\Users\dpeng\Desktop\Unity_projects\social-clicker" />
+      <option name="PASS_PARENT_ENVS" value="1" />
+      <option name="USE_EXTERNAL_CONSOLE" value="0" />
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor &amp; Play" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="UNITY_ATTACH_AND_PLAY" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+      <option name="allowRunningInParallel" value="false" />
+      <option name="listenPortForConnections" value="false" />
+      <option name="pid" />
+      <option name="projectPathOnTarget" />
+      <option name="selectedOptions">
+        <list />
+      </option>
+      <method v="2" />
+    </configuration>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="fb872a5e-87c5-4cbc-8910-3705fe63d095" name="Changes" comment="" />
+      <created>1708538330687</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1708538330687</updated>
+      <workItem from="1708538334398" duration="796000" />
+      <workItem from="1708545321924" duration="19000" />
+      <workItem from="1708623767180" duration="5318000" />
+      <workItem from="1708637460376" duration="6468000" />
+      <workItem from="1708707473170" duration="4531000" />
+      <workItem from="1708726620582" duration="134000" />
+    </task>
+    <task id="LOCAL-00001" summary="edited somehting">
+      <option name="closed" value="true" />
+      <created>1708538496733</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1708538496733</updated>
+    </task>
+    <task id="LOCAL-00002" summary="Added unity settings">
+      <option name="closed" value="true" />
+      <created>1708538510583</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1708538510583</updated>
+    </task>
+    <task id="LOCAL-00003" summary="Update">
+      <option name="closed" value="true" />
+      <created>1708623814341</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1708623814341</updated>
+    </task>
+    <task id="LOCAL-00004" summary="defsrgd">
+      <option name="closed" value="true" />
+      <created>1708624066824</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624066824</updated>
+    </task>
+    <task id="LOCAL-00005" summary="bru">
+      <option name="closed" value="true" />
+      <created>1708624805641</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624805641</updated>
+    </task>
+    <task id="LOCAL-00006" summary="bru">
+      <option name="closed" value="true" />
+      <created>1708624817629</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624817629</updated>
+    </task>
+    <task id="LOCAL-00007" summary="good">
+      <option name="closed" value="true" />
+      <created>1708624878904</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1708624878904</updated>
+    </task>
+    <task id="LOCAL-00008" summary="good">
+      <option name="closed" value="true" />
+      <created>1708628054190</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1708628054190</updated>
+    </task>
+    <task id="LOCAL-00009" summary="boost time variable and keyword mao">
+      <option name="closed" value="true" />
+      <created>1708647955716</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1708647955717</updated>
+    </task>
+    <task id="LOCAL-00010" summary="...">
+      <option name="closed" value="true" />
+      <created>1708648381166</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1708648381166</updated>
+    </task>
+    <task id="LOCAL-00011" summary="moved smth">
+      <option name="closed" value="true" />
+      <created>1708648465546</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1708648465546</updated>
+    </task>
+    <task id="LOCAL-00012" summary="changed if statement">
+      <option name="closed" value="true" />
+      <created>1708648873298</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1708648873298</updated>
+    </task>
+    <task id="LOCAL-00013" summary="if statements">
+      <option name="closed" value="true" />
+      <created>1708651419456</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1708651419456</updated>
+    </task>
+    <task id="LOCAL-00014" summary="fixed smth">
+      <option name="closed" value="true" />
+      <created>1708707601570</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1708707601570</updated>
+    </task>
+    <task id="LOCAL-00015" summary="boost time">
+      <option name="closed" value="true" />
+      <created>1708708392284</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1708708392284</updated>
+    </task>
+    <task id="LOCAL-00016" summary="fixed smth">
+      <option name="closed" value="true" />
+      <created>1708710277494</created>
+      <option name="number" value="00016" />
+      <option name="presentableId" value="LOCAL-00016" />
+      <option name="project" value="LOCAL" />
+      <updated>1708710277494</updated>
+    </task>
+    <task id="LOCAL-00017" summary="Weird commit, but deleted some file to work">
+      <option name="closed" value="true" />
+      <created>1708711767725</created>
+      <option name="number" value="00017" />
+      <option name="presentableId" value="LOCAL-00017" />
+      <option name="project" value="LOCAL" />
+      <updated>1708711767725</updated>
+    </task>
+    <task id="LOCAL-00018" summary="Update from repo">
+      <option name="closed" value="true" />
+      <created>1708711804738</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1708711804738</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
+  <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityUnitTestConfiguration" currentTestLauncher="Both" />
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
+    <MESSAGE value="edited somehting" />
+    <MESSAGE value="Added unity settings" />
+    <MESSAGE value="Update" />
+    <MESSAGE value="defsrgd" />
+    <MESSAGE value="bru" />
+    <MESSAGE value="good" />
+    <MESSAGE value="boost time variable and keyword mao" />
+    <MESSAGE value="..." />
+    <MESSAGE value="moved smth" />
+    <MESSAGE value="changed if statement" />
+    <MESSAGE value="if statements" />
+    <MESSAGE value="boost time" />
+    <MESSAGE value="fixed smth" />
+    <MESSAGE value="Weird commit, but deleted some file to work" />
+    <MESSAGE value="Update from repo" />
+    <option name="LAST_COMMIT_MESSAGE" value="Update from repo" />
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
+  </component>
+</project>
