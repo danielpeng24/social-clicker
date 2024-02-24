@@ -40,7 +40,7 @@ public class Controller : MonoBehaviour
     private int current_stage_of_achievements;
     private int job_promotions;
 
-    private int number_of_strikes;
+    public int number_of_strikes;
     public int max_number_of_strikes = 3;
     
     private bool is_strike;

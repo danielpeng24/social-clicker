@@ -4,10 +4,11 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Minor comments">
+    <list default="true" id="d16f0869-5b6b-4754-9e20-279240c081eb" name="Changes" comment="Renamed and updated the execution image renderer">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Social_clicker/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Chatbox.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Chatbox.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Controller.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Controller.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Labor_workers.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Labor_workers.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Social_credits.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Social_credits.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Sprites/ccpstrike.png" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Sprites/ccpstrike.png" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,7 +17,6 @@
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="UPDATE_TYPE" value="REBASE" />
   </component>
   <component name="GitHubPullRequestSearchHistory">{
   &quot;lastFilter&quot;: {
@@ -41,11 +41,13 @@
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Controller.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Controller.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Assets/Labor_workers.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/TryHarder/Desktop/Unityprojects/social_clicker/Assets/Scenes/SampleScene.unity" root0="SKIP_HIGHLIGHTING" />
@@ -145,7 +147,7 @@
       <workItem from="1708650084826" duration="5660000" />
       <workItem from="1708707315623" duration="4138000" />
       <workItem from="1708712937060" duration="3851000" />
-      <workItem from="1708730159173" duration="8483000" />
+      <workItem from="1708730159173" duration="9491000" />
     </task>
     <task id="LOCAL-00001" summary="Update code to be bettwe, added the latest sprites and made them work with Controller.cs">
       <option name="closed" value="true" />
@@ -435,7 +437,23 @@
       <option name="project" value="LOCAL" />
       <updated>1708740035666</updated>
     </task>
-    <option name="localTasksCounter" value="37" />
+    <task id="LOCAL-00037" summary="Deleted usless imports">
+      <option name="closed" value="true" />
+      <created>1708740349692</created>
+      <option name="number" value="00037" />
+      <option name="presentableId" value="LOCAL-00037" />
+      <option name="project" value="LOCAL" />
+      <updated>1708740349692</updated>
+    </task>
+    <task id="LOCAL-00038" summary="Renamed and updated the execution image renderer">
+      <option name="closed" value="true" />
+      <created>1708740594606</created>
+      <option name="number" value="00038" />
+      <option name="presentableId" value="LOCAL-00038" />
+      <option name="project" value="LOCAL" />
+      <updated>1708740594606</updated>
+    </task>
+    <option name="localTasksCounter" value="39" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -457,8 +475,6 @@
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
-    <MESSAGE value="good luck merging" />
-    <MESSAGE value="something good, also someone add back the music, we screwed something up" />
     <MESSAGE value="Added more things controller.cs" />
     <MESSAGE value="Added vine boom, and made sure that Daniel's garbage code is commented out" />
     <MESSAGE value="test" />
@@ -482,6 +498,8 @@
     <MESSAGE value="update" />
     <MESSAGE value="Fixed the weird bug where you can't earn social credits because multiplier was set to 0." />
     <MESSAGE value="Minor comments" />
-    <option name="LAST_COMMIT_MESSAGE" value="Minor comments" />
+    <MESSAGE value="Deleted usless imports" />
+    <MESSAGE value="Renamed and updated the execution image renderer" />
+    <option name="LAST_COMMIT_MESSAGE" value="Renamed and updated the execution image renderer" />
   </component>
 </project>

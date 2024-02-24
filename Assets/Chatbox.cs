@@ -78,6 +78,7 @@ public class Chatbox : MonoBehaviour
             {
                 _controller.social_credits -= 9999;
                 _controller.taiwan_strike = true;
+                _controller.number_of_strikes++;
                 text = "You lost 9999 social credits";
             }
         }
