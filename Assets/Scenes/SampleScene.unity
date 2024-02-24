@@ -2166,7 +2166,7 @@ GameObject:
   - component: {fileID: 1346908391}
   m_Layer: 0
   m_Name: GameController
-  m_TagString: Untagged
+  m_TagString: GameController
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2193,13 +2193,13 @@ MonoBehaviour:
   current_multiplier: 1
   last_time_clicked: 0
   max_time_not_clicked: 20
+  taiwan_button: {fileID: 406936970}
   number_of_strikes: 0
   max_number_of_strikes: 3
   strike_image: {fileID: 1332754132}
   taiwan_strike: 0
   taiwan_strike_image: {fileID: 1815173229}
   execution_image: {fileID: 1447208207}
-  taiwan_button: {fileID: 406936970}
 --- !u!4 &1346908392
 Transform:
   m_ObjectHideFlags: 0
