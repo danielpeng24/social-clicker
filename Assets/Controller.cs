@@ -70,7 +70,6 @@ public class Controller : MonoBehaviour
     
      private void Start()
      {
-         Debug.Log(boost_time);
          strike_sprite_renderer = strike_image.GetComponent<SpriteRenderer>();
          strike_audio = strike_image.GetComponentInChildren<AudioSource>();
          strike_audio.enabled = false;
@@ -230,7 +229,7 @@ public class Controller : MonoBehaviour
                 if (max_social_credits > 1000)
                 {
                     current_stage_of_achievements++;
-                    current_multiplier += 0.05f;
+                    current_multiplier += 0.069f;
                     chat.SendMessageToChat("Game: we accepted your uni application +2.5% permanent SC boost");
                 }
 
