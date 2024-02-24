@@ -2183,7 +2183,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c11ddc6ce804ee743bf261baa59de555, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  boost_time: 0
+  boost_time: -1
   chat: {fileID: 697825298}
   social_credits: 0
   lose_credits: 0
