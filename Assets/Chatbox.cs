@@ -72,15 +72,14 @@ public class Chatbox : MonoBehaviour
             if (text.ToLower() == "glory to the ccp")
             {
                 _controller.boost_time = 103;
-                text = "GLORY TO THE CCP 103 seconds boost";
+                text = "\nGLORY TO THE CCP 103 seconds boost";
                 
             }
-
-
-            
             else if (text.ToLower() == "taiwan good")
             {
                 _controller.social_credits -= 9999;
+                _controller.taiwan_strike = true;
+                text = "You lost 9999 social credits";
             }
         }
         

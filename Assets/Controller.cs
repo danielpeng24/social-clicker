@@ -15,7 +15,10 @@ public class Controller : MonoBehaviour
     //Change some of the vars to private later after testing
 
     private Random rng = new Random();
-    public float boost_time;
+    
+    // Clever variable use, where this starts at -1 in order to not have our multiplier set to 0 at the start by the 
+    // boost reset which occurs at boost_time == 0.
+    public float boost_time = -2;
     public Chatbox chat;
     private float time_till_random_comment;
     
@@ -45,6 +48,12 @@ public class Controller : MonoBehaviour
     private SpriteRenderer strike_sprite_renderer;
     private AudioSource strike_audio;
     private float strike_time_start;
+
+    public bool taiwan_strike;
+    public GameObject taiwan_strike_image;
+    private SpriteRenderer taiwan_strike_sprite_renderer;
+    private AudioSource taiwan_strike_audio;
+    private float taiwan_strike_time_start;
     
     
     public GameObject execution_image;
@@ -59,38 +68,55 @@ public class Controller : MonoBehaviour
     {
         taiwan_pressed = true;
     }
-
-    private void STRIKE(bool is_strike)
-    {
-        if (is_strike)
-        {
-            number_of_strikes++;
-            strike_sprite_renderer.enabled = true;
-            strike_audio.enabled = true;
-        }
-        else
-        {
-            strike_sprite_renderer.enabled = false;
-            strike_audio.enabled = false;
-        }
-    }
-
+    
      private void Start()
      {
-         
+         Debug.Log(boost_time);
          strike_sprite_renderer = strike_image.GetComponent<SpriteRenderer>();
          strike_audio = strike_image.GetComponentInChildren<AudioSource>();
          strike_audio.enabled = false;
+
+         taiwan_strike_sprite_renderer = taiwan_strike_image.GetComponent<SpriteRenderer>();
+         taiwan_strike_audio = taiwan_strike_image.GetComponentInChildren<AudioSource>();
+         taiwan_strike_audio.enabled = false;
          
          
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
          time_till_random_comment = rng.Next(3, 10);
-         
-         time_till_taiwan_spawns = 0f;
-         // time_till_taiwan_spawns = rng.Next(20, 60)
+
+         time_till_taiwan_spawns = rng.Next(20, 60);
          taiwan_current_position = taiwan_button.GetComponent<Transform>();
          taiwan_button.SetActive(false);
+     }
+     
+     private void STRIKE(bool is_strike)
+     {
+         if (is_strike)
+         {
+             number_of_strikes++;
+             strike_sprite_renderer.enabled = true;
+             strike_audio.enabled = true;
+         }
+         else
+         {
+             strike_sprite_renderer.enabled = false;
+             strike_audio.enabled = false;
+         }
+     }
+
+     private void TAIWAN_STRIKE(bool is_strike)
+     {
+         if (is_strike)
+         {
+             taiwan_strike_sprite_renderer.enabled = true;
+             taiwan_strike_audio.enabled = true;
+         }
+         else
+         {
+             taiwan_strike_sprite_renderer.enabled = false;
+             taiwan_strike_audio.enabled = false;
+         }
      }
 
     //
@@ -230,6 +256,7 @@ public class Controller : MonoBehaviour
 
         }
 
+        // Written by Cody, guided by Brian
         if (labor_workers == 10)
         {
             chat.SendMessageToChat("You have a following, the CCP has given you 1 worker");
@@ -248,9 +275,9 @@ public class Controller : MonoBehaviour
         }
         else if (labor_workers == 200)
         {
-            chat.SendMessageToChat("You have too many workers, the people now think that you are a captitalist");
-            labor_workers += 1;
-
+            chat.SendMessageToChat("You have too many workers, the people now think that you are a capitalist");
+            chat.SendMessageToChat("The CCP takes away 50 workers");
+            labor_workers -= 50;
         }
 
 
@@ -272,19 +299,27 @@ public class Controller : MonoBehaviour
             chat.SendMessageToChat("CCP: You failed to click the button, the CPP be coming for you\n");
         }
         
+        // Written by Daniel Peng, fixed bug and refactored by Brian
+        // Make sure that this ony occurs once, thus == 103, rather than 0 <= boost_time <= 103
+        if ((int)boost_time == 103)
+        {
+            current_multiplier += 1.0f;
+        }
+        else if ((int)boost_time == 0)
+        {
+            Debug.Log(boost_time);
+            Debug.Log(true);
+            current_multiplier -= 1.0f;
+            
+            // Make sure that this ony occurs once
+            boost_time -= 1f;
+        }
+
         if (boost_time > 0)
         {
-            boost_time -= Time.time;
-            if ((int)boost_time == 103)
-            {
-                current_multiplier += 1.0f;
-            }
-            else if ((int)boost_time == 0)
-            {
-                current_multiplier -= 1.0f;
-            }
-
+            boost_time -= Time.deltaTime;
         }
+
         if (number_of_strikes >= max_number_of_strikes)
         {
             execution_sprite_renderer.enabled = true;
@@ -321,15 +356,29 @@ public class Controller : MonoBehaviour
         
         
         //Update the punishments
+        if (Time.time - strike_time_start >= 3)
+        {
+            STRIKE(false);
+        }
         if (lose_credits)
         {
             social_credits -= Math.Abs((float)0.95 * social_credits * Time.deltaTime);
         }
 
-        if (Time.time - strike_time_start >= 3)
+        if (taiwan_strike)
         {
-            STRIKE(false);
+            TAIWAN_STRIKE(true);
+            taiwan_strike = false;
+            taiwan_strike_time_start = Time.time;
         }
+
+        if (Time.time - taiwan_strike_time_start >= 3)
+        {
+            TAIWAN_STRIKE(false);
+        }
+
+
+        
 
 
 
