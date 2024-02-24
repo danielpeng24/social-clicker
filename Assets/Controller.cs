@@ -49,17 +49,30 @@ public class Controller : MonoBehaviour
     
     public GameObject execution_image;
     private SpriteRenderer execution_sprite_renderer;
-
-    public GameObject Canvas;
     
     public GameObject taiwan_button;
-    private Transform taiwan_current_location;
+    private Transform taiwan_current_position;
     private float time_till_taiwan_spawns;
     private bool taiwan_pressed;
 
     public void Is_taiwan_pressed()
     {
         taiwan_pressed = true;
+    }
+
+    private void STRIKE(bool is_strike)
+    {
+        if (is_strike)
+        {
+            number_of_strikes++;
+            strike_sprite_renderer.enabled = true;
+            strike_audio.enabled = true;
+        }
+        else
+        {
+            strike_sprite_renderer.enabled = false;
+            strike_audio.enabled = false;
+        }
     }
 
      private void Start()
@@ -73,11 +86,11 @@ public class Controller : MonoBehaviour
          execution_sprite_renderer = execution_image.GetComponent<SpriteRenderer>();
          last_time_clicked = Time.time;
          time_till_random_comment = rng.Next(3, 10);
-         // time_till_taiwan_spawns = rng.Next(30, 60);
-         taiwan_current_location = taiwan_button.GetComponent<Transform>();
-         time_till_taiwan_spawns = 0;
          
-
+         time_till_taiwan_spawns = 0f;
+         // time_till_taiwan_spawns = rng.Next(20, 60)
+         taiwan_current_position = taiwan_button.GetComponent<Transform>();
+         taiwan_button.SetActive(false);
      }
 
     //
@@ -127,7 +140,7 @@ public class Controller : MonoBehaviour
                 }
                 else
                 {
-                    chat.SendMessageToChat("Game: You game a little fame");
+                    chat.SendMessageToChat("Game: You gain a little fame");
                 }
             }
             else if (max_social_credits is >= 101 and <= 500)
@@ -149,7 +162,7 @@ public class Controller : MonoBehaviour
                 }
                 else
                 {
-                    chat.SendMessageToChat("CCP: WORK HARDER! NOT SMARTER!");
+                    chat.SendMessageToChat("CCP: KEEP WORK HARDER! NOT SMARTER!");
                 }
             }
             else if (max_social_credits is >= 1501 and <= 2000)
@@ -251,31 +264,14 @@ public class Controller : MonoBehaviour
         // check for punishments
         if (Time.time - last_time_clicked > max_time_not_clicked)
         {
-            is_strike = true;
-            number_of_strikes++;
-             
-            strike_sprite_renderer.enabled = true;
-            strike_audio.enabled = true;
+            STRIKE(true);
             lose_credits = true;
              
             strike_time_start = Time.time;
             last_time_clicked = Time.time;
             chat.SendMessageToChat("CCP: You failed to click the button, the CPP be coming for you\n");
         }
-
-        if (lose_credits)
-        {
-            social_credits -= Math.Abs((float)0.95 * social_credits * Time.deltaTime);
-        }
-
-        if (is_strike && Time.time - strike_time_start >= 2.5)
-        {
-            is_strike = false;
-            strike_sprite_renderer.enabled = false;
-            strike_audio.enabled = false;
-            last_time_clicked = Time.time;
-        }
-
+        
         if (boost_time > 0)
         {
             boost_time -= Time.time;
@@ -293,22 +289,46 @@ public class Controller : MonoBehaviour
         {
             execution_sprite_renderer.enabled = true;
             chat.SendMessageToChat("CCP: You failed the game, the execution team is headed you way\n");
-            // Application.Quit();
+            Application.Quit();
+        }
+        if (0 <= time_till_taiwan_spawns && 0.1 >= time_till_taiwan_spawns)
+        {
+        
+            Vector3 rand_location = new Vector3();
+            rand_location.x = rng.Next(-5, 5);
+            rand_location.y = rng.Next(-5, 5);
+            rand_location.z = 0;
+            taiwan_current_position.position = rand_location;
+            taiwan_button.SetActive(true);
+            time_till_taiwan_spawns -= 0.1f;
+        }
+        time_till_taiwan_spawns -= Time.deltaTime;
+        if (taiwan_pressed)
+        {
+            taiwan_button.SetActive(false);
+            taiwan_pressed = false;
+            time_till_taiwan_spawns = rng.Next(20, 60);
+            
+        }
+        else if (time_till_taiwan_spawns < -10)
+        {
+            STRIKE(true);
+            lose_credits = true;
+             
+            strike_time_start = Time.time;
+            chat.SendMessageToChat($"You failed to attack Taiwan, STRIKE {number_of_strikes}");
+        }
+        
+        
+        //Update the punishments
+        if (lose_credits)
+        {
+            social_credits -= Math.Abs((float)0.95 * social_credits * Time.deltaTime);
         }
 
-        // time_till_taiwan_spawns -= Time.deltaTime;
-        if (time_till_taiwan_spawns == 0)
+        if (Time.time - strike_time_start >= 3)
         {
-
-            Vector3 rand_location = new Vector3();
-            rand_location.x = rng.Next(0, 500);
-            rand_location.y = rng.Next(0, 500);
-            rand_location.z = 0f;
-            taiwan_current_location.position = rand_location;
-            GameObject spawed_taiwan = Instantiate(taiwan_button, taiwan_current_location);
-            spawed_taiwan.transform.SetParent(Canvas.transform);
-            Debug.Log("Spawed Taiwan");
-            time_till_taiwan_spawns -= 1;
+            STRIKE(false);
         }
 
 
